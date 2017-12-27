@@ -16,7 +16,7 @@ public class ChestListener implements Listener {
             return;
         }
 
-        if (event.getAction() != PlayerInteractEvent.RIGHT_CLICK_BLOCK) {
+        if (event.getAction() != PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) {
             return;
         }
 
