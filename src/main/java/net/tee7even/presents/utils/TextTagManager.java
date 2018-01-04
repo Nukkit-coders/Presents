@@ -65,8 +65,8 @@ public class TextTagManager implements Listener {
         packet.metadata = new EntityMetadata()
                 .putLong(Entity.DATA_FLAGS, flags)
                 .putString(Entity.DATA_NAMETAG, text)
-                .putLong(Entity.DATA_LEAD_HOLDER_EID, -1)
-                .putByte(Entity.DATA_LEAD, 0);
+                .putLong(Entity.DATA_LEAD_HOLDER_EID, -1);
+//                .putByte(Entity.DATA_LEAD, 0);
 
         level.addChunkPacket((int)textTag.x >> 4, (int)textTag.z >> 4, packet);
 
@@ -104,8 +104,8 @@ public class TextTagManager implements Listener {
         flags |= 1 << Entity.DATA_FLAG_ALWAYS_SHOW_NAMETAG;
         packet.metadata = new EntityMetadata()
                 .putLong(Entity.DATA_FLAGS, flags)
-                .putLong(Entity.DATA_LEAD_HOLDER_EID, -1)
-                .putByte(Entity.DATA_LEAD, 0);
+                .putLong(Entity.DATA_LEAD_HOLDER_EID, -1);
+//                .putByte(Entity.DATA_LEAD, 0);
 
         for (TextTag textTag : textTags.values()) {
             if (!event.getPlayer().getLevel().getName().equals(textTag.levelName)) {

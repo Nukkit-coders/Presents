@@ -45,8 +45,8 @@ class ChestManager {
 
     static void place(Player player) {
         int[] faces = {4, 2, 5, 3};
-        chests.add(new Chest(player.getFloorX(), player.getFloorY(), player.getFloorZ(), player.level, faces[player.getDirection()]));
-        dataProvider.saveChest(player.getFloorX(), player.getFloorY(), player.getFloorZ(), player.level.getName(), faces[player.getDirection()]);
+        chests.add(new Chest(player.getFloorX(), player.getFloorY(), player.getFloorZ(), player.level, faces[player.getDirection().getIndex()]));
+        dataProvider.saveChest(player.getFloorX(), player.getFloorY(), player.getFloorZ(), player.level.getName(), faces[player.getDirection().getIndex()]);
         Message.send(player, "place");
     }
 

@@ -1,7 +1,7 @@
 name: Presents
 main: net.tee7even.presents.Presents
-version: "1.5"
-author: Tee7even
+version: "1.6"
+author: Tee7even, Nukkit Coders
 api: ["1.0.0"]
 permissions:
   presents:
